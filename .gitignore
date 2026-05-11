@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env
+.idea/
+.vscode/
+*.db
+*.sqlite3
+migrations/versions/*.pyc
+.DS_Store
