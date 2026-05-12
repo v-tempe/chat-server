@@ -16,3 +16,6 @@ class MessageTooLongError(DomainException):
 
 class UnauthorizedError(DomainException):
     pass
+
+class IncorrectPasswordError(DomainException):
+    pass

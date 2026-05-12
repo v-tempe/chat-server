@@ -2,6 +2,8 @@ from dataclasses import dataclass, field
 from datetime import datetime
 
 
+MIN_PASSWORD_LENGTH = 8
+MAX_PASSWORD_LENGTH = 24
 MAX_MESSAGE_LENGTH = 2000
 
 
@@ -12,7 +14,6 @@ class User:
     password_hash: str
     created_at: datetime = field(default_factory=datetime.now)
 
-    # business-rule: check password complexity
     def is_valid_username(self) -> bool:
         return len(self.username) >= 3
 
