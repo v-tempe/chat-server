@@ -11,4 +11,8 @@ dependencies = [
     "pytest==8.2.0",
     "pytest-asyncio==0.23.6",
     "passlib[argon2]==1.7.4",
+    "tortoise-orm[asyncpg]>=0.31.0",
+    "tortoise-cli>=0.2.0",
 ]
+[tool.tortoise]
+config = "app.infrastructure.database.TORTOISE_ORM"

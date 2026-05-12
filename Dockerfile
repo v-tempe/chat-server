@@ -17,12 +17,12 @@ RUN uv export --frozen -o requirements.txt && \
     uv pip install --system --no-cache-dir -r requirements.txt
 
 COPY app ./
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 EXPOSE 8000
 
-ENTRYPOINT ["uvicorn", "app.main:app"]
-
-CMD ["--host", "0.0.0.0", "--port", "8000"]
+ENTRYPOINT ["entrypoint.sh"]
