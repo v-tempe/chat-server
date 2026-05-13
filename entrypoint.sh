@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export PYTHONPATH=/app
 export TORTOISE_ORM="app.infrastructure.database.TORTOISE_ORM"
 tortoise init
 tortoise makemigrations
